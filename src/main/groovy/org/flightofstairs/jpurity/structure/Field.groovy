@@ -7,7 +7,9 @@ class Field {
 	String className
 	String fieldName
 
-	boolean refEffectivelyImmutable
+	boolean isFinal
 
-	Field confirmRefImmutable() { new Field(className, fieldName, true) }
+	String toString() {
+		return "Field( " + (isFinal?  "final " : "") + "$className.$fieldName )"
+	}
 }

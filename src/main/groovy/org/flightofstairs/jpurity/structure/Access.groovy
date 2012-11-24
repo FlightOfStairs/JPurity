@@ -3,11 +3,11 @@ package org.flightofstairs.jpurity.structure
 import groovy.transform.Immutable
 
 @Immutable
-class Call {
-	Method caller
-	Method callee
+class Access {
+	Method method
+	Field field
 
 	String toString() {
-		return "Call( $caller -> $callee )"
+		return "Access( $method -> $field )"
 	}
 }
