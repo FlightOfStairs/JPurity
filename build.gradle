@@ -13,4 +13,5 @@ dependencies {
 	testCompile 'junit:junit:4.10'
 
 	compile 'org.ow2.asm:asm:4.0'
+	compile 'org.gcontracts:gcontracts-core:1.2.3'
 }
