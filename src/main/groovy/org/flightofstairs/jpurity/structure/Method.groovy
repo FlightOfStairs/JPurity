@@ -1,8 +1,11 @@
 package org.flightofstairs.jpurity.structure
 
-import groovy.transform.Immutable;
+import groovy.transform.Immutable
+import org.gcontracts.annotations.Invariant
+import org.gcontracts.annotations.Requires
 
 @Immutable
+// @Invariant({ ! isAbstract && isFinal }) // Can't have invariant and immutable. :(
 public class Method {
 	String className
 	String methodName
@@ -12,7 +15,9 @@ public class Method {
 	boolean isFinal
 	boolean isAbstract
 
+	@Override
 	String toString() {
-		return "Method( $className.$methodName $signature )"
+		String prefix = isAbstract ? "abstract " :isFinal ? "final " : "";
+		return "Method( $prefix$className.$methodName $signature )"
 	}
 }
