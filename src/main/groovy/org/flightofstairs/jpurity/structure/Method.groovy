@@ -1,8 +1,6 @@
 package org.flightofstairs.jpurity.structure
 
 import groovy.transform.Immutable
-import org.gcontracts.annotations.Invariant
-import org.gcontracts.annotations.Requires
 
 @Immutable
 // @Invariant({ ! isAbstract && isFinal }) // Can't have invariant and immutable. :(
